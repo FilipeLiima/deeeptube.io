@@ -1,22 +1,34 @@
 import streamlit as st
+import pandas as pd
 from main import process_url
+from utils.logger import HISTORY_FILE
+import os
 
-st.set_page_config(page_title="Deep Tube", page_icon="🎬", layout="centered")
-st.title("🎬 Deep Tube - YouTube Downloader")
+st.set_page_config(page_title="Deep Tube", page_icon="🎬")
+st.title("🎬 Deep Tube - Multi-download YouTube")
+st.write("Cole uma ou várias URLs do YouTube (uma por linha) para baixar vídeos.")
 
-st.markdown(
-    "Cole a URL do vídeo do YouTube abaixo e clique em **Download**."
-)
+# Text area para múltiplas URLs
+urls_text = st.text_area("URLs do YouTube", height=150)
+urls = [u.strip() for u in urls_text.splitlines() if u.strip()]
 
-# Campo de input
-url = st.text_input("YouTube URL:")
+if st.button("Iniciar Download") and urls:
+    progress_bar = st.progress(0)
+    results = []
 
-# Botão para processar
-if st.button("Download"):
-    if url.strip() == "":
-        st.warning("Por favor, insira uma URL.")
-    else:
-        with st.spinner("Processando..."):
-            result = process_url(url.strip())
-            st.success(result)  # <-- parêntese fechado corretamente
+    for i, url in enumerate(urls):
+        res = process_url(url)
+        results.append(res)
+        st.write(f"{i+1}/{len(urls)}: {res['mensagem']}")
+        progress_bar.progress((i+1)/len(urls))
 
+    st.success("Todos os downloads foram processados!")
+
+# Mostrar histórico
+st.write("---")
+st.subheader("📜 Histórico de Downloads")
+if os.path.isfile(HISTORY_FILE):
+    df = pd.read_csv(HISTORY_FILE)
+    st.dataframe(df)
+else:
+    st.write("Nenhum histórico encontrado.")

@@ -1,3 +1,6 @@
 [2026-02-05 14:32:37] Valid URL received: https://www.youtube.com/watch?v=dkvEvZWN0qw
 [2026-02-05 14:34:01] SUCCESS | URL: https://www.youtube.com/watch?v=dkvEvZWN0qw | Title: iOS 26.2 - Turn On (ULTRA DARK) Liquid Glass on iPhone! | Duration: 190s
 [2026-02-05 14:48:14] SUCCESS | URL: https://www.youtube.com/watch?v=cqhsgrErhXE | Title: O jeito mais fácil de fazer café de Campeão (4:6 no Automático) | Duration: 1140s
+[2026-02-05 16:17:35] SUCESSO | URL: https://www.youtube.com/watch?v=JSiaMTDAW_o | Título: Não Erre Mais Com a Sua Furadeira! | Duração: 356s
+[2026-02-05 16:18:08] SUCESSO | URL: https://www.youtube.com/watch?v=mBenb7O8Hnc | Título: Máquina de Guerra | Trailer oficial | Netflix | Duração: 123s
+[2026-02-05 16:18:12] SUCESSO | URL: https://www.youtube.com/watch?v=dIriTY4bu3Q | Título: OS 26.3 RC CHEGOU! 🔥 Fim de uma ERA no iPhone… | Duração: 606s
