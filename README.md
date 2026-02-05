@@ -59,9 +59,9 @@ python -m pip install --upgrade pip
 python -m pip install streamlit yt-dlp
 Executar:
 
-Via terminal: python main.py
+Opção 01 - Via terminal: python main.py
 
-Via interface web: python -m streamlit run app.py → abre no navegador em http://localhost:8501
+Opção 02 - Via interface web: python -m streamlit run app.py → abre no navegador em http://localhost:8501
 
 Cole a URL do YouTube e clique em Download. O vídeo será salvo na pasta videos/ e os logs serão atualizados.
 ```
