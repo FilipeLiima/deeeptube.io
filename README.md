@@ -28,8 +28,6 @@ Ele valida URLs, baixa vídeos em baixa resolução (360p) e registra logs de do
 
 ## 📁 Estrutura do Projeto
 
-## 📁 Estrutura do Projeto
-
 deeptube/
 ├── main.py
 │ Lógica principal de download e validação
