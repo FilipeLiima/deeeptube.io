@@ -28,16 +28,25 @@ Ele valida URLs, baixa vídeos em baixa resolução (360p) e registra logs de do
 
 ## 📁 Estrutura do Projeto
 
+## 📁 Estrutura do Projeto
+
 deeptube/
-│
-├── main.py # Lógica principal de download e validação
-├── app.py # Interface web Streamlit
-├── utils/ # Funções auxiliares
-│ ├── downloader.py # Função para baixar vídeos
-│ ├── logger.py # Função para registrar logs
-│ └── validators.py # Função para validar URLs
-├── videos/ # Pasta onde os vídeos baixados são salvos
-└── download_log.txt # Log de downloads e erros
+├── main.py
+│ Lógica principal de download e validação
+├── app.py
+│ Interface web Streamlit
+├── utils/
+│ Funções auxiliares
+│ ├── downloader.py
+│ │ Função para baixar vídeos
+│ ├── logger.py
+│ │ Função para registrar logs
+│ └── validators.py
+│ Função para validar URLs
+├── videos/
+│ Pasta onde os vídeos baixados são salvos
+└── download_log.txt
+Log de downloads e erros
 
 ## ⚡ Como Executar
 
