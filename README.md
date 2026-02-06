@@ -5,7 +5,7 @@ O projeto possui uma **interface web interativa com Streamlit** e também pode s
 
 Ele valida URLs, baixa vídeos em baixa resolução (360p) e registra logs de download.
 
-ACESSO APP DISPONÍVEL EM: https://deeptube-youtube.streamlit.app/
+ACESSO APP DISPONÍVEL EM: https://deeptube-youtube.streamlit.app/ <br>
 APRESENTAÇÃO: https://youtu.be/F0jXUmQt_qo
 
 ## 📌 Funcionalidades
