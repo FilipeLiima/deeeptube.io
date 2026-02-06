@@ -8,7 +8,7 @@ def download_video(url: str):
     Baixa o vídeo do YouTube na pasta 'videos/' em qualidade <= 360p.
     Retorna título e duração em segundos.
     """
-    os.makedirs(VIDEOS_DIR, exist_ok=True)  # cria a pasta se não existir
+    os.makedirs(VIDEOS_DIR, exist_ok=True)
 
     ydl_opts = {
         "format": "best[height<=360]",
@@ -18,7 +18,7 @@ def download_video(url: str):
 
     with YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
-        title = info.get("title", "Desconhecido")
+        title = info.get("title", "Unknown")
         duration = info.get("duration", 0)
 
     return title, duration

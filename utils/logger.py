@@ -9,7 +9,7 @@ def log_event(message: str):
     """
     Salva logs de download ou erro em download_log.txt
     """
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")  # só data + hora, sem segundos
     with open(LOG_FILE, "a", encoding="utf-8") as f:
         f.write(f"[{timestamp}] {message}\n")
 
@@ -22,4 +22,4 @@ def save_history(title: str, url: str, duration: int):
         writer = csv.writer(f)
         if not exists:
             writer.writerow(["Data", "Título", "URL", "Duração"])
-        writer.writerow([datetime.now().strftime("%Y-%m-%d %H:%M:%S"), title, url, duration])
+        writer.writerow([datetime.now().strftime("%Y-%m-%d %H:%M"), title, url, duration])  # só data + hora
